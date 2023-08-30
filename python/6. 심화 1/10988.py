@@ -1,18 +1,10 @@
 s = input()
 t = len(s)
-n = 0
+n = 1
 
-if t%2 == 0:
-    for i in range(t):
-        if s[i] != s[t-i-1]:
-            n = 0
-        else:
-            n = 1
-else:
-    for i in range(t):
-        if s[i] != s[t-i-1]:
-            n=0
-        else:
-            n=1
+for i in range(t):
+    if s[i] != s[t-i-1]:
+        n = 0
+        break
 
 print(n)
